@@ -16,5 +16,5 @@ if '__main__' == __name__:
         from . import visualize_result
         if 'quantiles' == sys.argv[2]:
             visualize_result.show_quantiles(sys.argv[3:])
-            exit(0)
-
+        elif 'crps' == sys.argv[2]:
+            visualize_result.show_crps(sys.argv[3:])
