@@ -47,6 +47,7 @@ def show_crps(argv):
     for i in range(len(data)):
         crps_value[i] = metrics.crps(results[i], data[i, -1])
     plt.plot(crps_value.cumsum() / (1 + np.arange(len(data))))
+    print('mean crps:', crps_value.mean())
     plt.xlabel('time')
     plt.ylabel('crps accumulated mean')
     if 4 == len(argv):

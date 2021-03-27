@@ -46,7 +46,7 @@ class FICNN:
         x = x.reshape(1, 20)
         self.last_x = x
         return np.array([
-            np.array(model.predict(x)) for model in self.models
+            np.array(model.predict(x)).clip(min=-100, max=100) for model in self.models
         ]).ravel()
 
 
