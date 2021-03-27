@@ -1,0 +1,7 @@
+{
+  "input":  "test_data3",
+  "output": "ficnn_ds3",
+  "force_rewrite": true,
+  "lr": 0.5,
+  "num_layers": 10
+}
